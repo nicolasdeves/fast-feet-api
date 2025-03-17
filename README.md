@@ -33,3 +33,5 @@ Fast Feet API - Transportadora fictícia
 
 - Postgres
 
+- Prisma ORM
+
