@@ -1,0 +1,16 @@
+services:
+  postgress:
+    container_name: fast-feet-postgress
+    image: postgres
+    ports:
+        - 5432:5432
+    environment:
+      POSTGRES_USER: fastfeet
+      POSTGRES_PASSWORD: fastfeet
+      POSTGRES_DB: fastfeet_db
+      PGDATA: ./data/postgres
+    volumes:
+      - ./data/pg:/data/postgres
+      
+    # ./data/pg: É uma pasta sistema local
+    # /data/postgres: É o diretório dentro do container
