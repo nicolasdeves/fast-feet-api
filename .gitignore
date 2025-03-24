@@ -57,3 +57,7 @@ report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
 # PG
 data
+
+# Keys
+*.pem
+*_base*
