@@ -29,9 +29,10 @@ Fast Feet API - Transportadora fictícia
 
 ### Tecnologias utilizadas
 
-- NESTJS
+- NestJS
 
 - Postgres
 
 - Prisma ORM
 
+- ZOD
