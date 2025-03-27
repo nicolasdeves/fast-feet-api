@@ -8,7 +8,7 @@ import { z } from "zod";
 const tokenSchema = z.object({
     sub: z.number()
 })
-type TokenSchema = z.infer<typeof tokenSchema>
+export type TokenSchema = z.infer<typeof tokenSchema>
 
 @Injectable()
 export class JwtStrategy extends PassportStrategy(Strategy) {
