@@ -13,9 +13,27 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model user {
+model User {
   id       Int    @id @default(autoincrement())
   email    String @unique
   name     String
   password String
+
+  @@map("user")
+}
+
+enum OrderStatus {
+  PENDING // Aguardando retirada do entregador
+  IN_PROGRESS // Retirada pelo entregador
+  DELIVERED // Entregue ao destinatário
+  RETURNED // Devolvida
+}
+
+model Order {
+  id          Int         @id @default(autoincrement())
+  status      OrderStatus @default(PENDING)
+  description String
+  createdAt   DateTime    @default(now())
+
+  @@map("order")
 }

@@ -44,3 +44,13 @@ Gerar chave pública e privada:
 `openssl genpkey -algorithm RSA -out private.pem -pkeyopt rsa_keygen_bits:2048`, `openssl rsa -in private.pem -pubout -out public.pem`, 
 
 `base64 -w 0 private.pem > private_base64.txt` `base64 -w 0 public.pem > public_base64.txt`
+
+### Docker
+
+- Iniciar container PostgreSQL: `docker-compose up -d`
+
+### Prisma
+
+- Rodar migrations: `npx prisma migrate dev`
+
+- Atualiza o Prisma Client: `npx prisma generate`
